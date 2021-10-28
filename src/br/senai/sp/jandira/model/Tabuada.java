@@ -1,25 +1,30 @@
 package br.senai.sp.jandira.model;
 
-import java.util.Iterator;
-
 public class Tabuada {
 	
-	int multiplicando;
-	int multiplicador;
-	int resultado;
+	private int multiplicando;
+	private int maximoMultiplicador;
 	
 	public void setMultilplicando(int multiplicando){
 		this.multiplicando = multiplicando;
 	}
 	
-	public void setMultiplicador(int multiplicador) {
-		this.multiplicador = multiplicador;
+	public void setmaximoMultiplicador(int maximoMultiplicador) {
+		this.maximoMultiplicador = maximoMultiplicador;
 	}
 	
 	public void calcular() {
-		String contas[] = new String[multiplicador + 1]; 
-		for (int i = 0; i < multiplicador; i++) {
+		String contas[] = new String[maximoMultiplicador + 1]; 
+		for (int multiplicador = 0; multiplicador <= maximoMultiplicador; multiplicador++) {
 			
+			int resultado = multiplicando * multiplicador;
+			
+			String stringMultiplicando = (String.valueOf(multiplicando));
+			String stringMultiplicador = (String.valueOf(multiplicador));
+			String stringResultado = (String.valueOf(resultado));
+			
+			contas[multiplicador] = stringMultiplicando +" x " +stringMultiplicador +" = " +stringResultado;
 		}
 	}
+	
 }
