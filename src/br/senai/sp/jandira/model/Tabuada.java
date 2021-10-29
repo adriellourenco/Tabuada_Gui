@@ -19,11 +19,11 @@ public class Tabuada {
 			
 			int resultado = multiplicando * multiplicador;
 			
-			String stringMultiplicando = (String.valueOf(multiplicando));
-			String stringMultiplicador = (String.valueOf(multiplicador));
-			String stringResultado = (String.valueOf(resultado));
+			//String stringMultiplicando = (String.valueOf(multiplicando));
+			//String stringMultiplicador = (String.valueOf(multiplicador));
+			//String stringResultado = (String.valueOf(resultado));
 			
-			contas[multiplicador] = stringMultiplicando +" x " +stringMultiplicador +" = " +stringResultado;
+			contas[multiplicador] = multiplicando +" x " +multiplicador +" = " +resultado;
 		}
 	}
 	
