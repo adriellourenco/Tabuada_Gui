@@ -5,16 +5,19 @@ public class Tabuada {
 	private int multiplicando;
 	private int maximoMultiplicador;
 	
-	public void setMultilplicando(int multiplicando){
+	public void setMultilplicando(String StringMultiplicando){
+		int multiplicando = Integer.parseInt(StringMultiplicando);
 		this.multiplicando = multiplicando;
 	}
 	
-	public void setmaximoMultiplicador(int maximoMultiplicador) {
+	public void setMaximoMultiplicador(String StringMaximoMultiplicador) {
+		int maximoMultiplicador = Integer.parseInt(StringMaximoMultiplicador);
 		this.maximoMultiplicador = maximoMultiplicador;
 	}
 	
+	String contas[] = new String[maximoMultiplicador + 1]; 
+	
 	public void calcular() {
-		String contas[] = new String[maximoMultiplicador + 1]; 
 		for (int multiplicador = 0; multiplicador <= maximoMultiplicador; multiplicador++) {
 			
 			int resultado = multiplicando * multiplicador;
@@ -25,6 +28,10 @@ public class Tabuada {
 			
 			contas[multiplicador] = multiplicando +" x " +multiplicador +" = " +resultado;
 		}
+	}
+	
+	public String[] getContas() {
+		return contas;
 	}
 	
 }
